@@ -61,7 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutBtn = document.getElementById("log-out");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", function () {
-        window.location.href = "/index.html";
+        // window.location.href = "/index.html";
+        alert("Yes login");
       });
     }
     // Toggle Button
