@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if (userNumber.length === 11) {
           if (userPassword === 1234) {
-            window.location.href = "main.html";
+            window.location.href = "/main.html";
           } else {
             getDisplayProperty("error", "flex");
             getInnerText("error_massage", "Incorrect Password");
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logoutBtn = document.getElementById("log-out");
     if (logoutBtn) {
       logoutBtn.addEventListener("click", function () {
-        window.location.href = "index.html";
+        window.location.href = "/index.html";
       });
     }
     // Toggle Button
