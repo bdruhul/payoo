@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- website title  -->
+    <title>Payoo - MFS</title>
+    <!-- website title  -->
+    <!-- website title  -->
+    <link rel="shortcut icon" href="assets/images/payoo.png" type="image/x-icon">
+    <!-- website title  -->
+    <!-- added tailwind and duisy ui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- added tailwind and duisy ui  -->
+    <!-- added custom css  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- added custom css  -->
+</head>
+
+<body class="bg-slate-800 ">
+    <section class=" max-w-md min-h-screen mx-auto py-6 bg-gray-200  pt-72">
+        <!-- header  -->
+        <header>
+            <nav class="flex justify-center items-center">
+                <div class="mt-10 relative flex justify-center items-center w-9/12 mb-10">
+                    <img class="w-70 absolute" src="assets/images/bg.png" alt="" srcset="">
+                    <img class="w-16 -mt-36" src="assets/images/Group.png" alt="" srcset="">
+                </div>
+            </nav>
+        </header>
+        <!-- header  -->
+        <!-- login  -->
+        <div class="relative -mt-20">
+            <div class="hero-content">
+                <div class=" rounded-2xl bg-[#fff]  w-full">
+                    <form class="card-body">
+                        <fieldset class="fieldset">
+                            <label class="fieldset-label font-bold text-xl text-[#080808] mb-2">Mobile Number</label>
+                            <input id="accountNumber" type="number"
+                                class="input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-6 py-6 placeholder:text-sm"
+                                placeholder="Enter Your Number" required />
+                            <label class="fieldset-label font-bold text-xl mb-2 text-[#080808] mt-3">4 Digit Pin</label>
+                            <input id="password" type="password"
+                                class=" input rounded-full border-none outline-none focus:outline-none bg-[#F4F5F7] w-full px-6 py-6 placeholder:text-sm"
+                                placeholder="Password" required />
+                            <button
+                                class="btn mt-8 bg-[#0874F2] border-none outline-none py-7 rounded-full font-medium text-2xl text-white"
+                                id="login-btn">Login</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- login  -->
+    </section>
+    <!-- Error Notification -->
+    <section
+        class="bg-[rgba(0,0,0,0.5)] max-w-md min-h-screen mx-auto py-6 absolute top-0 left-1/2 transform -translate-x-1/2 w-full flex justify-center items-center"
+        id="error">
+        <div class=" bg-black text-white p-4 w-3/4 mx-auto rounded-3xl  text-center">
+            <p id="error_massage"></p>
+            <button class="bg-white text-red-800 px-4 py-2 rounded mt-2 hover:bg-gray-200" id="ok">OK</button>
+        </div>
+    </section>
+    <!-- End Error Notification -->
+    <!-- custom js -->
+    <script src="js/custom.js"></script>
+    <!-- custom js -->
+</body>
+
+</html>
