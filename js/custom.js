@@ -280,5 +280,57 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     }
     // bounus
+
+    // // Pay bill Script
+
+    const payBtn = document.getElementById("pay-Money");
+    if (payBtn) {
+      payBtn.addEventListener("click", function (event) {
+        event.preventDefault();
+        const bankName = document.getElementById("Bank").value;
+        const accountNumber = document.getElementById("Biller-number").value;
+        const amount = getInputById("amountPay");
+        const password = getInputById("passwordPay");
+
+        if (
+          bankName === "Bkash" ||
+          bankName === "Nagad" ||
+          bankName === "Rocket"
+        ) {
+          if (accountNumber.length === 11) {
+            if (amount > 0) {
+              if (password === 1234) {
+                const availbleBlance =
+                  document.getElementById("money").innerText;
+                const addBlance = parseFloat(availbleBlance) - amount;
+                getInnerText("money", addBlance);
+                document.getElementById("Bank").value = "Select";
+                getRemoveInput("Biller-number");
+                getRemoveInput("amountPay");
+                getRemoveInput("passwordPay");
+                getDisplayProperty("error", "flex");
+                getInnerText("error_massage", "Successfully Payment");
+              } else {
+                getDisplayProperty("error", "flex");
+                getInnerText("error_massage", "Incorrect Password");
+              }
+            } else {
+              getDisplayProperty("error", "flex");
+              getInnerText("error_massage", "Please Input Valid Amount");
+            }
+          } else {
+            getDisplayProperty("error", "flex");
+            getInnerText(
+              "error_massage",
+              "Please Input Valid Biller Account Number"
+            );
+          }
+        } else {
+          getDisplayProperty("error", "flex");
+          getInnerText("error_massage", "Please Select Bank Name");
+        }
+      });
+    }
+    // Pay bill Script
   }
 });
